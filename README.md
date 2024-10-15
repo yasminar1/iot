@@ -7,7 +7,8 @@ This Manual is made for SipSmart. You can control SipSmart with an app, voice co
 Hardware:
 - NodeMCU ESP8266
 - Ledstrip
-- Philips Hue
+  
+![IMG_2861 normaal](https://github.com/user-attachments/assets/ef680cab-a0a3-480f-98b1-008f6ffd1827)
 
 Software:
 - Arduino IDE
@@ -87,7 +88,7 @@ Installeer de Arduino IO libraries:
 Adafruit IO Setup:
 1. To use Adafruit IO, we have to set up an account and create a dashboard.
 2. Go to https://io.adafruit.com/ , press “Get Started for Free” and create an account.
-3. After creating an account press the yellow key in the Adafruit IO menu.
+3. After creating an account press the yellow key in the Adafruit IO menu. <img width="1000" alt="Scherm­afbeelding 2024-10-15 om 23 49 12" src="https://github.com/user-attachments/assets/f3c35a64-1ae2-4278-944b-576b6863823a">
 4. Copy your key and username.
 
 Adafruit IO Feed and create Colorpicker:
@@ -98,6 +99,7 @@ Adafruit IO Feed and create Colorpicker:
 5. Create feed name: color
 6. Create Block
 7. Select a color with the Color Picker
+<img width="1000" alt="Scherm­afbeelding 2024-10-15 om 23 49 23" src="https://github.com/user-attachments/assets/b4aabc7b-d1d4-448e-ac06-c1a00f53a80b">
 
 Changing the code:
 1. In Arduino: File > Examples > Adafruit IO Arduino > Adafruitio_14_neopixel
@@ -114,7 +116,22 @@ If everything worked, the serial monitor will display that you're connected
 Now change the color in Adafruit IO, you will see this in the Serial monitor
 If the ledstrip is connected, you'll be able to change the LED color with the colorpicker.
 
-#You created your own Philips HUE!
+# You created your own Philips HUE!
+
+# Errors
+The connecttion between Adafruit IO and Arduino didn't work correctly.
+<img width="955" alt="Scherm­afbeelding 2024-10-15 om 21 37 54" src="https://github.com/user-attachments/assets/a02fbdb3-1154-4b17-aec3-16349a372b67">
+
+The first problem that my Serial monitor was just showing a string of dots.
+After looking at different manuals I added Wifi.begin to the code. 
+When I used that code the dots dissappeard and instead showed this:
+
+<img width="950" alt="Scherm­afbeelding 2024-10-15 om 22 08 29" src="https://github.com/user-attachments/assets/bc8400a7-0c57-4bf0-bf65-7ba1a6d3b9e2">
+
+Eventhough the baud was the same in the serial.monitor as it was in the code it still didn't change. I was also not able to change the lights via Adafruit IO. I searched a lot on Arduino forum, stackoverflow and different websites, the slides on DLO and other manuals, but I couldn't find the solution to this problem. I am alsno NOT great with tech which makes this an even bigger challenge..
+
+
+
 
 
 
